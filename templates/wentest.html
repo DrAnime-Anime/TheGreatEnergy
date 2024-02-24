@@ -1,66 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>THG</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../static/pagecss/css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="{{url_for('OurStore')}}">Back To Store</a>
-                <a class="navbar-brand" href="{{url_for('getCart')}}"> Cart ({{ session['Shoppingcart']|length }}) </a>
-            </div>
-        </nav>
-        <!-- Product section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ post.image }}" alt="{{ post.name }}" /></div>
-                    <div class="col-md-6">
-                        <h1 class="display-5 fw-bolder">{{ post.name }}</h1>
-                        <div class="fs-5 mb-5" id="agent_commission_model">
-                            <span id="agent_commission_model">{{ post.price }}</span>
-                        </div>
-                        <p class="lead">{{ post.content }}</p>
-                        <div class="d-flex" style="display: flex;">
-                          <form action="{{url_for('AddCart')}}" method="post" style="display: flex;">
-                            <input class="form-control text-center me-3" id="inputQuantity" name="quantity"  type="number" value="1" style="max-width: 3rem"/>
-                            <button class="btn btn-outline-dark flex-shrink-0" type="submit">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
-                            </button>
-                          </form>
-                        </div>
-                    </div>
+  <head>
+    <title>TGE</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="../static/indexstyle/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../static/indexstyle/icomoon/icomoon.css">
+    <link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/indexstyle/css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="../static/indexstyle/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body style="background-color: black;">
+    <header id="header" style="background-color: black;">
+        <div id="header-wrap">
+          <nav class="primary-nav padding-small">
+            <div class="container">
+              <div class="row d-flex align-items-center">
+                <div class="col-lg-2 col-md-2">
+                  <div class="main-logo">
+                    <a href="/">
+                      <img src="../static/Background/logo.png" alt="logo">
+                    </a>
+                  </div>
                 </div>
-            </div>
-        </section>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../static/pagecss/js/scripts.js"></script>
-        <script>
-
-          function numberWithCommas(number) {
-          var parts = number.toString().split(".");
-          parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-          return parts.join(".");
-          }
-          $(document).ready(function() {
-          $("#agent_commission_model").each(function() {
-              var num = $(this).text();
-              var commaNum = numberWithCommas(num);
-              $(this).text(commaNum);
-          });
-          });
+                <div class="col-lg-10 col-md-10">
+                  <div class="navbar">
   
-  </script>
-    </body>
+                    <div id="main-nav" class="stellarnav d-flex justify-content-end right">
+                      <ul class="menu-list">
+                        <li class="menu-item has-sub">
+                          <a href="{{url_for('OurStore')}}" class="item-anchor active d-flex align-item-center" style="font-size: 30px; color: white;"  >OurStore</a>
+                        </li>
+                        {% if current_user.id == 1 %}
+                        <li class="menu-item has-sub">
+                          <a href="{{url_for('admin')}}" class="item-anchor d-flex align-item-center" >Admin</a>
+                        </li>
+                        {% endif %}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <section id="billboard" class="overflow-hidden" style="background-image: url(../static/Background/Hero-background.png); height: 120vh; background-size: cover;">
+              <div class="banner-content">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h2 class="banner-title" style="color: white;">TheGreatEnergy</h2>
+                      <p>Once you got a solar panel on a roof, energy is free , Once we convert our entire electricity grid to green renewable energy cost of living goes down</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      </section>
+
+    <section class="shoppify-section-banner" style="background-image: url(../static/Background/second.png);background-size: cover; height: 120vh;">
+      <div class="container"> 
+        <div class="product-collection">
+          <div class="left-content collection-item">
+            <div class="products-thumb">
+              <img src="../static/Background/aaa.jpg" alt="h" class="large-image image-rounded">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
+              <h3 class="item-title" style="color: white;">The Renewable Energy.</h3>
+              <p>where today's innovation meets tomorrow's preservation.</p>
+              <div class="btn-wrap">
+                <a href="{{url_for('OurStore')}}" class="d-flex align-items-center" style="color: white;">shop Renewable Product <i class="icon icon-arrow-io"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </section>
+
+    <section id="quotation" class="align-center padding-large" style="background-color: black;">
+      <div class="inner-content">
+        <h2 class="section-title divider" style="color: white;">Our Mission</h2>
+        <blockquote>
+          <q>we all know that the electricity we use daily generated Mainly by Oil, Coal, Gas, and Nuclearwe use less renewable source now my website will promote green energy to low the air pollution and make India green India as you have full contol over electricity you use even you can sellthe extra electricity to goverment and earn</q>
+        </blockquote>
+      </div>
+    </section>
+    <footer id="footer">
+        <div class="container">
+          <div class="footer-menu-list">
+            <div class="row d-flex flex-wrap justify-content-between">
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="footer-menu">
+                  <h5 class="widget-title">THG</h5>
+                  <ul class="menu-list list-unstyled">
+                    <li class="menu-item">
+                      <a href="about.html">About us</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="blog.html">OurStore</a>
+                    </li>
+                    {% if current_user.is_authenticated %}
+                    <li class="menu-item">
+                      <a href="#">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="menu-item">
+                      <a href="#">Login</a>
+                    </li>
+                    {% endif %}
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="footer-menu">
+                  <h5 class="widget-title">Contact Us</h5>
+                  <p>Do you have any questions or suggestions? <a href="#" class="email">TheGreatEnergy@info.com</a>
+                  </p>
+                  <p>Do you need assistance? Give us a call. <br>
+                    <strong>+448 485 1547</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="footer-menu">
+                  <h5 class="widget-title">About</h5>
+                  <p>TheGreatEnergy is your premier destination for all things renewable energy. As an e-commerce platform, we're dedicated to providing eco-conscious individuals and businesses with a wide range of sustainable products. From solar panels to wind turbines, our mission is to empower you to make cleaner, greener choices for a brighter, more sustainable future. Join us in the renewable energy revolution today!</p>
+                  <div class="social-links">
+                    <ul class="d-flex list-unstyled">
+                      <li>
+                        <a href="#">
+                          <i class="icon icon-facebook"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="icon icon-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="icon icon-youtube-play"></i>
+                        </a>
+                      </li>
+                      <li>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="../static/indexstyle/js/jquery-1.11.0.min.js"></script>
+    <script src="../static/indexstyle/js/plugins.js"></script>
+    <script src="../static/indexstyle/js/script.js"></script>
+  </body>
 </html>
