@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TheGreatEnergy</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='Style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='./Link/bootstrap.min.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='FooterCss/fonts/icomoon/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='FooterCss/css/style.css')}}">
+
+</head>
+<body>
+        <section class="page1">
+            <div class="top-bar">
+                <div class="Logo">
+                    <h1>TGE</h1>
+                </div>
+                <div class="Category-menu">
+                    <div class="Buy"><a href="./OurStore"><h1>OURSTORE</h1></a></div>
+                    <a href="#footer"><h1>ABOUT</h1></a>
+                </div>
+            </div>
+            <div class="intro-heading">
+                <div class="brand-name">
+                    <h1>THE GREAT</h1>
+                    <h1 class="brand-name-2">ENERGY</h1>
+                </div>
+                <div class="brand-quont">
+                    <h1>Once you got a solar panel on a roof, energy is free</h1>
+                    <h1>Once we convert our entire electricity grid to green<br>renewable energy cost of living goes down</h1>
+                </div>
+            </div>
+            <div class="intro-ends">
+                    <div class="Goal-tital">
+                        <h1>OUR MISSION</h1>
+                    </div>
+                    <div class="Goal-info">
+                        <h1>we all know that the electricity we use daily generated Mainly by Oil, Coal, Gas, and Nuclear</h1><h1> we use less renewable source now my website will promote green energy </h1><h1>to low the air pollution and make India green India as you have full contol over </h1> <h1>electricity you use even you can sellthe extra electricity to goverment and earn</h1>
+                    </div>
+            </div>
+        </section>
+        <section class="page2">
+            <div class="slider">
+                <div class="Slide-div">
+                  <img src="../static/Background/01.png" alt="img" draggable="false">
+                  <img src="../static/Background/02.png" alt="img" draggable="false">
+                  <img src="../static/Background/03.png" alt="img" draggable="false">
+                  <img src="../static/Background/04.png" alt="img" draggable="false">
+                  <img src="../static/Background/05.png" alt="img" draggable="false">
+                </div>
+              </div>
+        </section>
+        <footer class="footer-32892 pb-0">
+          <div class="site-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-md pr-md-5 mb-4 mb-md-0">
+                  <h3>About Us</h3>
+                  <p class="mb-4">TheGreatEnergy is your premier destination for all things renewable energy. As an e-commerce platform, we're dedicated to providing eco-conscious individuals and businesses with a wide range of sustainable products. From solar panels to wind turbines, our mission is to empower you to make cleaner, greener choices for a brighter, more sustainable future. Join us in the renewable energy revolution today!</p>
+                  <ul class="list-unstyled quick-info mb-4">
+                    <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span> +22 251 7902 319</a></li>
+                    <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-envelope"></span> infothegreatenergy@gmail.com</a></li>
+                  </ul>
+                </div>
+                <div class="col-md mb-4 mb-md-0">
+                  <h3>Latest Tweet</h3>
+                  <ul class="list-unstyled tweets">
+                    <li class="d-flex">
+                      <div class="mr-4"><span class="icon icon-twitter"></span></div>
+                      <div>Power up your life with clean energy! 💡 Explore TheGreatEnergy's e-commerce store for the latest in renewable energy products and solutions. Let's make a sustainable change together! #CleanEnergy #Ecommerce</div>
+                    </li>
+                    <li class="d-flex">
+                      <div class="mr-4"><span class="icon icon-twitter"></span></div>
+                      <div>Looking to reduce your carbon footprint and save on energy bills? 🌿 Check out TheGreatEnergy's e-commerce store for eco-friendly alternatives that won't break the bank. It's time to go green! 🌍💚 #RenewableEnergy #Sustainability</div>
+                    </li>
+                    <li class="d-flex">
+                      <div class="mr-4"><span class="icon icon-twitter"></span></div>
+                      <div>Want to harness the power of the sun? TheGreatEnergy's e-commerce shop has everything you need to start your solar journey. Say goodbye to fossil fuels and hello to a brighter, cleaner future! ☀️🌎 #SolarPower #Ecommerce</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                  <h3>Instagram</h3>
+                  <div class="row gallery">
+                    <div class="col-6">
+                      <a href="#"><img src="{{url_for('static', filename='Background/noah-buscher-x8ZStukS2PM-unsplash.jpg')}}" alt="Image" class="img-fluid"></a>
+                      <a href="#"><img src="{{url_for('static', filename='Background/gg.jpg')}}" alt="Image" class="img-fluid"></a>
+                    </div>
+                    <div class="col-6">
+                      <a href="#"><img src="{{url_for('static', filename='Background/a.jpg')}}" alt="Image" class="img-fluid"></a>
+                      <a href="#"><img src="{{url_for('static', filename='Background/qq.jpg')}}" alt="Image" class="img-fluid"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
+                    <ul class="list-unstyled footer-menu mr-auto">
+                      <li><a href="/">Home</a></li>
+                      <li><a href="/OurStore">Our Store</a></li>
+                      {% if current_user.is_authenticated %}
+                      <li><a href="/Logout">Logout</a></li>
+                      {% else %}
+                      <li><a href="/Login">Login</a></li>
+                      {% endif %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+    <script src="{{url_for('static', filename='app.js')}}"></script>
+</body>
+</html>

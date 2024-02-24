@@ -1,0 +1,39 @@
+UE22+ 3D Wind Turbine
+
+₹539,000.00
+
+Technical Data
+
+Rotor	 
+Rotor type	Horizontal Axis (HAWT)
+Rated output	3000 W
+Rated wind speed	12.7 m/s
+Max. Power	3000W
+Cut-in wind speed	1.0 m/s
+Furling wind speed	15 m/s
+Yaw control	Passive
+Rotor speed control	Microcontroller guided
+Survival wind speed	50 m/s
+Rotor diameter	1.8 m
+Number of blades	9 No
+Swept area	2.55 square meters
+Lateral Thrust	220 NT
+Brake system	Electrodynamic
+Safety system	Passive yaw steering
+Generator	 
+Generator type	Three-phase synchronous generator,
+PM outer rotor 16 pole low loss core
+Voltage	60 to 220 VAC by tap setting
+Electronics	Overvoltage and safety controller;
+Ready for grid inverter connection
+Materials	 
+Struts	Acrylic Powder coated steel
+Generator casing	Steel / stainless steel
+Rotor blades	Thermoformed ABS
+Miscellaneous	 
+Weight incl. adaptor	Approx. : 65kg
+Warranty	
+3 years*
+
+(*subject to certain terms & conditions)
+

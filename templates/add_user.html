@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='SignUpPagecss/Style.css')}}">
+    <title>SignUp</title>
+  </head>
+
+  <body>
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">SignUp</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="/SignUp">
+						{{ form.hidden_tag() }}
+                        <div class="form-row">
+                            <div class="name">Name</div>
+                            <div class="value">
+								{{ form.name(class="input--style-6") }}
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Username</div>
+                            <div class="value">
+                                <div class="input-group">
+									{{ form.username(class="input--style-6") }}
+								</div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Email</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    {{ form.email(class="input--style-6") }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Password</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    {{ form.password_hash(class="input--style-6") }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Confirm Password</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    {{ form.password_hash2(class="input--style-6") }}
+                                </div>
+                            </div>
+                        </div>
+						<div class="form-row">
+                            <div class="name">City</div>
+                            <div class="value">
+                                <div class="input-group">
+									{{ form.city(class="input--style-6") }}
+                                </div>
+                            </div>
+                        </div>
+						<div class="form-row">
+                            <div class="name">Contact No</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    {{ form.contact(class="input--style-6") }}
+                                </div>
+                            </div>
+                        </div>
+						<div class="form-row">
+                            <div class="name">Address</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    {{ form.address(class="input--style-6") }}
+                                </div>
+                            </div>
+                        </div>
+						<div class="form-row">
+                            <div class="name">Zipcode</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    {{ form.zipcode(class="input--style-6") }}
+                            </div>
+                        </div>
+                    </div>
+					<div class="card-footer">
+						{{ form.submit(class="btn btn--radius-2 btn--blue-2") }}
+					</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</body>
+</html>

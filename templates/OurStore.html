@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>THG</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="../static/OurStore/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../static/OurStore/icomoon/icomoon.css">
+    <link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/OurStore/css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="../static/OurStore/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- script
+    ================================================== -->
+    <script src="../static/OurStore/js/modernizr.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <div id="header-wrap">
+        <nav class="primary-nav padding-small">
+          <div class="container">
+            <div class="row d-flex align-items-center">
+              <div class="col-lg-2 col-md-2">
+                <div class="main-logo">
+                  <a href="/">
+                    <img src="images/main-logo.png" alt="logo">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-10 col-md-10">
+                <div class="navbar">
+
+                  <div id="main-nav" class="stellarnav d-flex justify-content-end right">
+                    <ul class="menu-list">
+                      <li class="menu-item has-sub">
+                        <a href="{{url_for('logout')}}" class="item-anchor d-flex align-item-center" >Logout</a>
+                      </li>
+                      <li class="menu-item has-sub">
+                        <a href="{{url_for('OurStore')}}" class="item-anchor active d-flex align-item-center">OurSore</a>
+                      </li>
+                      <li>
+                        <a href="{{url_for('Profile')}}" class="item-anchor" >Profile</a>
+                      </li>
+                      {% if current_user.id == 1 %}
+                      <li class="menu-item has-sub">
+                        <a href="{{url_for('admin')}}" class="item-anchor d-flex align-item-center" >Admin</a>
+                      </li>
+                      {% endif %}
+                      <li class="menu-item has-sub">
+                        <a href="{{url_for('getCart')}}" class="item-anchor d-flex align-item-center" > Cart ({{ session['Shoppingcart']|length }}) </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section id="selling-products" class="product-store bg-light-grey padding-large">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Best Rewnewable Energy products</h2>
+        </div>
+        <div class="tab-content">
+          <div id="all" data-tab-content class="active">
+            <div class="row d-flex flex-wrap">
+                {% for post in posts %}
+              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                <div class="image-holder">
+                  <img src="{{ post.image }}" alt="{{ post.name }}" class="product-image" style="height: 400px;">
+                </div>
+                <br>
+                <div class="cart-concern">
+                  <div class="cart-button d-flex justify-content-between align-items-center">
+                    <form action="{{url_for('AddCart')}}" method="post">
+                      <input type="hidden" name="product_id" value="{{post.id}}">
+                      <button type="submit" class="btn-wrap cart-link d-flex align-items-center">add to cart</button>
+                      <input type="hidden" name="quantity" value="1" min="1" max="10">
+                    </form>
+                    <button type="button" class="view-btn tooltip
+                        d-flex">
+                      <a href="{{ url_for('details', id=post.id) }}"><i class="icon icon-screen-full"></i></a>
+                      <span class="tooltip-text">Quick view</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-detail" id="agent_commission_model">
+                  <h3 class="product-title">
+                    <a href="single-product.html">{{ post.name }}</a>
+                  </h3>
+                  <div class="item-price text-primary">₹ {{ post.price }}</div>
+                </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <script src="../static/OurStore/js/jquery-1.11.0.min.js"></script>
+    <script src="../static/OurStore/js/plugins.js"></script>
+    <script src="../static/OurStore/js/script.js"></script>
+    <script>
+            function numberWithCommas(number) {
+            var parts = number.toString().split(".");
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            return parts.join(".");
+            }
+            $(document).ready(function() {
+            $("#agent_commission_model div").each(function() {
+                var num = $(this).text();
+                var commaNum = numberWithCommas(num);
+                $(this).text(commaNum);
+            });
+            });
+    </script>
+  </body>
+</html>

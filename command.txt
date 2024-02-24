@@ -1,0 +1,64 @@
+virt\Scripts\activate
+set FLASK_ENV=development 
+set FLASK_DEBUG=1
+
+virt\Scripts\Activate.ps1
+
+Twitter
+
+1. 🌞 Harnessing the power of the sun, one solar panel at a time! ☀️💡 Let's continue to invest in renewable energy to create a brighter, sustainable future. #SolarPower #RenewableEnergy #CleanEnergy
+
+2. 💨 Wind turbines spinning gracefully in the breeze – a symbol of progress and sustainability. 🌬️💚 Let's keep the wind in our sails as we transition to clean energy sources! #WindPower #Renewables #GreenEnergy
+
+3. 🌊 The tide is turning in favor of renewable energy! 🌊🔌 Let's ride the wave of change and invest in ocean energy solutions for a cleaner and greener tomorrow. #OceanEnergy #RenewableRevolution #CleanTech
+
+4. 🍃 Green energy isn't just a buzzword; it's a solution to combat climate change. 🌍💪 Let's all do our part to support renewable energy initiatives and reduce our carbon footprint! #ClimateAction #Renewables #Sustainability
+
+5. ⚡️ From hydropower to geothermal energy, we have a wealth of renewable resources at our fingertips. Let's tap into these sustainable sources and power a more eco-friendly world! 💧🌋 #RenewableResources #CleanPower #GreenFuture
+
+6. 🏭 Transitioning our industries to run on clean energy is a win-win for the environment and the economy. 💼💚 Let's create jobs and protect our planet with renewable energy investments! #CleanEconomy #RenewableJobs #GreenGrowth
+
+7. 🌿 Mother Nature provides us with endless possibilities for renewable energy. It's time to innovate, adapt, and embrace these solutions for a brighter, greener future! 🌎💡 #RenewableInnovation #SustainableFuture #NatureInspires
+
+8. 🏡 Your home can be a powerhouse of clean energy! ☀️💨 Explore renewable options like solar panels and wind turbines to reduce your environmental footprint and lower your bills. #HomeRenewables #SustainableLiving #CleanHome
+
+9. 📚 Education is key to a sustainable future. Let's teach the next generation about the importance of renewable energy and inspire them to be eco-conscious leaders! 🌿📖 #RenewableEducation #YouthForClimate #FutureLeaders
+
+10. 🌄 As the sun sets on fossil fuels, let's rise to the occasion and embrace renewable energy as the path to a cleaner, healthier planet. 🌅💚 Together, we can make a difference! #CleanerPlanet #RenewableTransition #ClimateActionNow
+
+
+
+
+
+part 2 
+
+
+1. 🌞 Power up your life with clean energy! 💡 Explore TheGreatEnergy's e-commerce store for the latest in renewable energy products and solutions. Let's make a sustainable change together! #CleanEnergy #Ecommerce
+
+2. Looking to reduce your carbon footprint and save on energy bills? 🌿 Check out TheGreatEnergy's e-commerce store for eco-friendly alternatives that won't break the bank. It's time to go green! 🌍💚 #RenewableEnergy #Sustainability
+
+3. 💡 Want to harness the power of the sun? TheGreatEnergy's e-commerce shop has everything you need to start your solar journey. Say goodbye to fossil fuels and hello to a brighter, cleaner future! ☀️🌎 #SolarPower #Ecommerce
+
+4. Make your home a beacon of sustainability with TheGreatEnergy's e-commerce selection. From wind turbines to energy-efficient appliances, we've got your green living needs covered! 🏡🌿 #GreenLiving #EcoProducts
+
+5. Join the renewable energy revolution today! Shop at TheGreatEnergy's e-commerce store for cutting-edge products that help you live in harmony with the planet. Together, we can build a brighter, cleaner future. 🌍💪 #Renewables #ShopGreen
+
+6. Ready to make a positive impact on the environment? Explore TheGreatEnergy's e-commerce store and discover a world of sustainable energy solutions. Let's make every day Earth Day! 🌿🌎 #SustainableLiving #Ecommerce
+
+7. Are you tired of high energy bills and environmental impact? Dive into TheGreatEnergy's e-commerce store to find affordable and eco-friendly solutions for your home and business. Make the switch today! 💡🌱 #CleanTech #ShopSmart
+
+8. Looking for ways to support a greener future? Start by shopping at TheGreatEnergy's e-commerce store, where every purchase helps promote renewable energy adoption. Let's create a world powered by clean, sustainable sources! 🌞🌍 #RenewableRevolution #ShopTheFuture
+
+9. Eco-conscious shoppers rejoice! TheGreatEnergy's e-commerce platform is your one-stop destination for all things green energy. Make a difference with your choices today. 🌿💚 #EcoShopping #CleanEnergy
+
+10. From solar panels to energy-efficient appliances, TheGreatEnergy's e-commerce store has it all. Join the movement towards a sustainable tomorrow and shop with us today! 🌞
+
+🌿 #SustainableFuture #ShopNow
+
+
+
+
+about 
+
+
+TheGreatEnergy is your premier destination for all things renewable energy. As an e-commerce platform, we're dedicated to providing eco-conscious individuals and businesses with a wide range of sustainable products. From solar panels to wind turbines, our mission is to empower you to make cleaner, greener choices for a brighter, more sustainable future. Join us in the renewable energy revolution today!

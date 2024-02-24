@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='./Link/bootstrap.min.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <table class="table table-hover table-bordered table-striped">
+
+        {% for thegreatuser in thegreatuser %}
+            <tr>
+            <td>{{ thegreatuser.id }}. <a href="{{ url_for('update', id=thegreatuser.id)}}"></a> - {{thegreatuser.username }} - {{ thegreatuser.email }}
+            PW: {{ thegreatuser.password_hash }} - 
+            </tr>
+        {% endfor %}
+        
+        </table>
+</body>
+</html>

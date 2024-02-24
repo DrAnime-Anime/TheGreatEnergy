@@ -1,0 +1,11 @@
+UTL Solar Charge Controller Hybrid SMU 50A, Support - 12V Panel with 12V Inverter Battery, 24V Panel with 24 Volt Inverter Battery (50 AMP)
+
+
+ ₹3,579
+M.R.P.: ₹5,000.00M.R.P.: ₹5,000
+
+【High Performance Micro-Controller】High efficiency i.e. >95% SMU, equipped with high speed microcontroller, allowing it to perform its tasks more reliably and efficiently. The use of a high-speed microcontroller improves the system's performance.
+【Solar Panel Configuration】Compatible with both 12V and 24V solar panels. It has automatic voltage selection feature. Solar panels can be installed as: 12V, 25A: 150W/165W*3 (Parallel) |24V, 25A: 250W/315W/325W*3 (Parallel) |12V, 50A: 150W/165W*5 (Parallel) | 24V, 50A: 250W*6 | 315W/325W*5 | 390W/400W*4 | 425W*4 (Parallel)
+【In-Built Protection for Battery Under/Over-Charge】With 200Ah max. battery capacity, it uses four stages PWM regulation method to charge the battery i.e. Boost, Absorption, Float and Equalization. This feature prevents the battery from being overcharged.
+【Prioritize Solar Power over Grid Power】This 12/24V 50A SMU prioritises the use of solar power over grid power in order to reduce grid consumption. It uses grid power only when it is insufficient to meet the load requirement.
+【Wide Operating Temperature】This 50A SMU can be operated in harsh environment conditions. It can be used in temperatures ranging from 0°C to 50°C. Furthermore, it has wall mounted fixing and can be installed at small spaces due to its compact size and light weight.

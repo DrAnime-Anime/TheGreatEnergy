@@ -1,0 +1,217 @@
+@font-face{
+    font-family: varun;
+    src: url(./Fonts/Patua_One/PatuaOne-Regular.ttf);
+}
+@font-face {
+    font-family: varun1;
+    src: url(./Fonts/Inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+    font-family: logo;
+    src: url(./Fonts/Waltograph/waltograph.ui-bold.ttf);
+}
+@font-face {
+    font-family: nav;
+    src: url(./Fonts/Rowdies/Rowdies-Light.ttf);
+}
+@font-face {
+    font-family: title;
+    src: url(./Fonts/);
+}
+@font-face {
+    font-family: title;
+    src: url(./Fonts-new//Gotham-Font/Gotham-Bold.otf);
+}
+@font-face {
+    font-family: title2;
+    src: url(./Fonts-new/Rockwell-Font/Rockwell-Bold.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+/**************************Nav-bar*******************************************************************************/
+.page1{
+    width: 100%;
+    height: 200vh;
+    scroll-snap-align: start;
+    background-image: url(./Background/Hero-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.top-bar{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    padding-left: 10px;
+}
+.Logo h1{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-family: logo;
+    font-size: 50px;
+}
+.Category-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 70px;
+    color: white;
+    font-family: nav;
+    text-decoration: none;
+}
+.Category-menu h1{
+    padding-right: 20px;
+    font-size: 30px;
+    color: white;
+    font-family: varun;
+} 
+.Category-menu , a{
+    color: white;
+    text-decoration: none;
+}
+/*******************************page 1 *************************************************************************/
+
+.intro-heading{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+.brand-name-2 h1{
+    font-size: 70px;
+}
+.brand-name h1{
+    font-family: title2;
+    font-size: 60px;
+}
+.brand-quont h1{
+    font-family: title2;
+    font-size: 20px;
+}
+
+.intro-ends{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 600px;
+}
+.Goal-tital h1{
+    font-size: 45px;
+    font-family: title;
+    padding-bottom: 20px;
+}
+.Goal-info h1{
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: title2;
+}
+
+
+/***************************************page 2***************************************************************/
+
+.page2{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-image: url(./Background/page3.png);
+    background-color: black;
+    min-height: 100vh;
+    justify-content: flex-end;
+}
+.slider{
+    display: flex;
+    max-width: 900px;
+    position: relative;
+    
+}
+.slider .Slide-div{
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+.Slide-div.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.Slide-div.dragging img{
+    pointer-events: none;
+}
+.Slide-div img{
+    height: 100vh;
+    object-fit: cover;
+    user-select: none;
+    margin-left: 1px;
+    width: 400px;
+}
+.Slide-div img:first-child{
+    margin-left: 0px;
+}
+/***************************************footer******************************************************/
+footer{
+    width: 100%;
+    height: 80vh;
+    background-color: black;
+    color: white;
+    font-family: title;
+}
+.title-footer{
+    padding: 20px 20px;
+    font-size: 20px;
+}
+.fotter-flex{
+    margin: 20px;
+    display: flex;
+    margin-top: 120px;
+    margin-left: 50px;
+}
+.second-row,.first-row{
+   font-size: 13px;
+}
+.second-row{
+    margin-left: 40px;
+    font-size: 13px;
+}
+.last-title{
+    padding: 20px 20px;
+    font-size: 20px;
+}
+.creator{
+    position: relative;
+    top: 5px;
+    font-size: 20px;
+}
+.last-title{
+    padding-top: 40px;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+/**************************************************************************************************/

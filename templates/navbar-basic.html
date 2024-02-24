@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Nav-bar/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Nav-bar/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Nav-bar/css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
+    <title>TGE</title>
+<style> 
+        
+      @font-face {
+          font-family: logo;
+          src: url(../static/Nav-bar/fonts/Waltograph/waltograph.ui-bold.ttf);
+      }
+      .navbar-brand{
+        font-family: logo;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 700,
+        'GRAD' 200,
+        'opsz' 48
+      }
+      </style>
+  </head>
+    <header role="banner" style="color: black;">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/" style="color: black;">TGE</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav ml-auto">
+              {% if current_user.id == 1 %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('admin')}}"><span class="material-symbols-outlined">admin_panel_settings</span> </a>
+              </li>
+              {% endif %}
+              <li class="nav-item">
+                <a class="nav-link" href="/Manage_Account"> <span class="material-symbols-outlined">person</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('getCart')}}"><span class="material-symbols-outlined">shopping_bag</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Logout"><span class="material-symbols-outlined">logout</span></a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="{{url_for('result')}}">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
