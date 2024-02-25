@@ -1,174 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <title>TGE</title>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <link rel="stylesheet" type="text/css" href="../static/indexstyle/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="../static/indexstyle/icomoon/icomoon.css">
-    <link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../static/indexstyle/css/vendor.css">
-    <link rel="stylesheet" type="text/css" href="../static/indexstyle/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/SignUpPagecss/New/fonts/icomoon/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="../static/SignUpPagecss/New/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/SignUpPagecss/New/css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="../static/SignUpPagecss/New/css/style.css">
+
+    <title>SignUp</title>
   </head>
-  <body style="background-color: black;">
-    <header id="header" style="background-color: black;">
-        <div id="header-wrap">
-          <nav class="primary-nav padding-small">
-            <div class="container">
-              <div class="row d-flex align-items-center">
-                <div class="col-lg-2 col-md-2">
-                  <div class="main-logo">
-                    <a href="/">
-                      <img src="../static/Background/logo.png" alt="logo">
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-10 col-md-10">
-                  <div class="navbar">
-  
-                    <div id="main-nav" class="stellarnav d-flex justify-content-end right">
-                      <ul class="menu-list">
-                        <li class="menu-item has-sub">
-                          <a href="{{url_for('OurStore')}}" class="item-anchor active d-flex align-item-center" style="font-size: 30px; color: white;"  >OurStore</a>
-                        </li>
-                        {% if current_user.id == 1 %}
-                        <li class="menu-item has-sub">
-                          <a href="{{url_for('admin')}}" class="item-anchor d-flex align-item-center" >Admin</a>
-                        </li>
-                        {% endif %}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
+  <body>
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2" style="background-image: url('../static/Background/Login.jpg');"></div>
+    <div class="contents order-2 order-md-1">
 
-      <section id="billboard" class="overflow-hidden" style="background-image: url(../static/Background/Hero-background.png); height: 120vh; background-size: cover;">
-              <div class="banner-content">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <h2 class="banner-title" style="color: white;">TheGreatEnergy</h2>
-                      <p>Once you got a solar panel on a roof, energy is free , Once we convert our entire electricity grid to green renewable energy cost of living goes down</p>
-                    </div>
-                  </div>
-                </div>
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7">
+            <h3>SignUp to <strong>TheGreatEnergy</strong></h3>
+            <form action="/Login" method="post">
+              {{ form.hidden_tag() }}
+              <div class="form-group first">
+                <label for="username">Nmae</label>
+                {{ form.name(class="form-control" ,id="username") }}
               </div>
-      </section>
+              <div class="form-group first">
+                <label for="username">Username</label>
+                {{ form.username(class="form-control" ,id="username") }}
+              </div>
+              <div class="form-group last mb-3">
+                <label for="password">Password</label>
+                {{ form.password_hash(class="form-control",id="password") }}
+              </div>
+              <div class="form-group last mb-3">
+                <label for="password">Confirm Password</label>
+                {{ form.password_hash2(class="form-control",id="password") }}
+              </div>
+              <div class="form-group first">
+                <label for="username">Email</label>
+                {{ form.email(class="form-control" ,id="username") }}
+              </div>
+              <div class="form-group first">
+                <label for="username">City</label>
+                {{ form.city(class="form-control" ,id="username") }}
+              </div>
+              <div class="form-group first">
+                <label for="username">Contact No</label>
+                {{ form.contact(class="form-control" ,id="username") }}
+              </div>
+              <div class="form-group first">
+                <label for="username">Address</label>
+                {{ form.address(class="form-control" ,id="username") }}
+              </div>
+              <div class="form-group first">
+                <label for="username">Zipcode</label>
+                {{ form.zipcode(class="form-control" ,id="username") }}
+              </div>
+              
+              <div class="d-flex mb-5 align-items-center">
+                <span class="ml-auto"><a href="/SignUp" class="forgot-pass">New User Register Here</a></span> 
+              </div>
+              {{ form.submit(class="btn btn-block btn-primary") }}
 
-    <section class="shoppify-section-banner" style="background-image: url(../static/Background/second.png);background-size: cover; height: 120vh;">
-      <div class="container"> 
-        <div class="product-collection">
-          <div class="left-content collection-item">
-            <div class="products-thumb">
-              <img src="../static/Background/aaa.jpg" alt="h" class="large-image image-rounded">
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
-              <h3 class="item-title" style="color: white;">The Renewable Energy.</h3>
-              <p>where today's innovation meets tomorrow's preservation.</p>
-              <div class="btn-wrap">
-                <a href="{{url_for('OurStore')}}" class="d-flex align-items-center" style="color: white;">shop Renewable Product <i class="icon icon-arrow-io"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>        
-      </div>
-    </section>
-
-    <section id="quotation" class="align-center padding-large" style="background-color: black;">
-      <div class="inner-content">
-        <h2 class="section-title divider" style="color: white;">Our Mission</h2>
-        <blockquote>
-          <q>we all know that the electricity we use daily generated Mainly by Oil, Coal, Gas, and Nuclearwe use less renewable source now my website will promote green energy to low the air pollution and make India green India as you have full contol over electricity you use even you can sellthe extra electricity to goverment and earn</q>
-        </blockquote>
-      </div>
-    </section>
-    <footer id="footer">
-        <div class="container">
-          <div class="footer-menu-list">
-            <div class="row d-flex flex-wrap justify-content-between">
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer-menu">
-                  <h5 class="widget-title">THG</h5>
-                  <ul class="menu-list list-unstyled">
-                    <li class="menu-item">
-                      <a href="about.html">About us</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="blog.html">OurStore</a>
-                    </li>
-                    {% if current_user.is_authenticated %}
-                    <li class="menu-item">
-                      <a href="#">Logout</a>
-                    </li>
-                    {% else %}
-                    <li class="menu-item">
-                      <a href="#">Login</a>
-                    </li>
-                    {% endif %}
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer-menu">
-                  <h5 class="widget-title">Contact Us</h5>
-                  <p>Do you have any questions or suggestions? <a href="#" class="email">TheGreatEnergy@info.com</a>
-                  </p>
-                  <p>Do you need assistance? Give us a call. <br>
-                    <strong>+448 485 1547</strong>
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer-menu">
-                  <h5 class="widget-title">About</h5>
-                  <p>TheGreatEnergy is your premier destination for all things renewable energy. As an e-commerce platform, we're dedicated to providing eco-conscious individuals and businesses with a wide range of sustainable products. From solar panels to wind turbines, our mission is to empower you to make cleaner, greener choices for a brighter, more sustainable future. Join us in the renewable energy revolution today!</p>
-                  <div class="social-links">
-                    <ul class="d-flex list-unstyled">
-                      <li>
-                        <a href="#">
-                          <i class="icon icon-facebook"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="icon icon-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="icon icon-youtube-play"></i>
-                        </a>
-                      </li>
-                      <li>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
-      </footer>
+      </div>
+    </div>
 
-    <script src="../static/indexstyle/js/jquery-1.11.0.min.js"></script>
-    <script src="../static/indexstyle/js/plugins.js"></script>
-    <script src="../static/indexstyle/js/script.js"></script>
+    
+  </div>
+    
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="../static/SignUpPagecss/New/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/SignUpPagecss/New/js/popper.min.js"></script>
+    <script src="../static/SignUpPagecss/New/js/bootstrap.min.js"></script>
+    <script src="../static/SignUpPagecss/New/js/main.js"></script>
   </body>
 </html>

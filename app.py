@@ -552,7 +552,6 @@ def Profile():
     return render_template('Profile.html')
 
 @app.route('/web')
-@login_required
 def wen():
     posts = Posts.query.order_by(Posts.date_posted)
     return render_template('wentest.html',posts=posts)
