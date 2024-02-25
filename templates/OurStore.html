@@ -32,7 +32,7 @@
               <div class="col-lg-2 col-md-2">
                 <div class="main-logo">
                   <a href="/">
-                    <img src="../static/Background/logo.png" alt="logo">
+                    <img src="../static/Background/logoblack.png" alt="logo">
                   </a>
                 </div>
               </div>
@@ -78,7 +78,9 @@
                 {% for post in posts %}
               <div class="product-item col-lg-3 col-md-6 col-sm-6">
                 <div class="image-holder">
-                  <img src="{{ post.image }}" alt="{{ post.name }}" class="product-image" style="height: 400px;">
+                  <a href="{{url_for('details',id=post.id)}}">
+                    <img src="{{ post.image }}" alt="{{ post.name }}" class="product-image" style="height: 400px;">
+                  </a>
                 </div>
                 <br>
                 <div class="cart-concern">
@@ -88,16 +90,11 @@
                       <button type="submit" class="btn-wrap cart-link d-flex align-items-center">add to cart</button>
                       <input type="hidden" name="quantity" value="1" min="1" max="10">
                     </form>
-                    <button type="button" class="view-btn tooltip
-                        d-flex">
-                      <a href="{{ url_for('details', id=post.id) }}"><i class="icon icon-screen-full"></i></a>
-                      <span class="tooltip-text">Quick view</span>
-                    </button>
                   </div>
                 </div>
                 <div class="product-detail" id="agent_commission_model">
                   <h3 class="product-title">
-                    <a href="single-product.html">{{ post.name }}</a>
+                    <a href="{{url_for('details',id=post.id)}}">{{ post.name }}</a>
                   </h3>
                   <div class="item-price text-primary">₹ {{ post.price }}</div>
                 </div>

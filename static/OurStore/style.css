@@ -1989,7 +1989,7 @@ blockquote cite {
     width: 100%;
 }
 .product-item .cart-concern {
-    background: var(--light-color);
+    background: transparent;
     width: 80%;
     text-align: center;
     margin: auto;
@@ -2001,6 +2001,7 @@ blockquote cite {
     transition: 0.5s ease-out;
     padding: 20px 30px;
     opacity: 0;
+    margin-left: 60px;
 }
 .product-item:hover .cart-concern {
     bottom: 280px;
@@ -2010,10 +2011,11 @@ i.icon.icon-arrow-io {
     font-size: 12px;
 }
 .cart-concern .cart-button button {
-    background: none;
+  border-radius: 10px;
+    background: white;
     color: var(--dark-color);
     height: auto;
-    padding: 0;
+    padding: 10px;
     margin: 0;
 }
 .cart-concern .cart-button button i.icon {

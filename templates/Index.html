@@ -45,7 +45,7 @@
                         </li>
                         {% if current_user.id == 1 %}
                         <li class="menu-item has-sub">
-                          <a href="{{url_for('admin')}}" class="item-anchor d-flex align-item-center" >Admin</a>
+                          <a href="{{url_for('admin')}}" class="item-anchor d-flex align-item-center" style="font-size: 30px; color: white;"   >Admin</a>
                         </li>
                         {% endif %}
                       </ul>
@@ -57,9 +57,8 @@
           </nav>
         </div>
       </header>
-
-      <section id="billboard" class="overflow-hidden" style="background-image: url(../static/Background/Hero-background.png); height: 120vh; background-size: cover;">
-              <div class="banner-content">
+      <section id="billboard" class="overflow-hidden" style="background-image: url(../static/Background/Hero-background.png); height: 120vh; background-size: cover;">      
+        <div class="banner-content">
                 <div class="container">
                   <div class="row">
                     <div class="col-md-6">
