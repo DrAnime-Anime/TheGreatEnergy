@@ -58,6 +58,12 @@
                       <li class="menu-item has-sub">
                         <a href="{{url_for('getCart')}}" class="item-anchor d-flex align-item-center" > Cart ({{ session['Shoppingcart']|length }}) </a>
                       </li>
+                      <li class="menu-item has-sub">
+                        <form class="form-inline my-2 my-lg-0" action="{{url_for('result')}}" style="display: flex;">
+                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                      </li>
                     </ul>
                   </div>
                 </div>

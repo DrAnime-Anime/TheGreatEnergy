@@ -1,102 +1,132 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <title>THG</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="../static/OurStore/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../static/OurStore/icomoon/icomoon.css">
+    <link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/OurStore/css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="../static/OurStore/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!-- Our CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="{{ url_for('static', filename='Nav-bar/css/style1.css') }}" rel="stylesheet">
-    
-    <link rel="stylesheet" href="{{url_for('static', filename='Link/OurStore.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title class="">TGE</title>
+    <!-- script
+    ================================================== -->
+    <script src="../static/OurStore/js/modernizr.js"></script>
   </head>
   <body>
-  	{% include 'navbar-basic.html' %}
-  	<br/>
-		{% block content %}
-		<section class="section-products">
-			<div class="container">
-					<div class="row justify-content-center text-center">
-							<div class="col-md-8 col-lg-6">
-									<div class="header">
-											<h2>Renewable Products</h2>
-									</div>
-							</div>
-					</div>
-					<div class="row">
-                        <div class="products-grid js-products-grid">
-                            {% for product in products %}
-                                <div class="product-container">
-                                    <div class="product-image-container">
-                                        <a href="{{ url_for('details', id=product.id) }}">
-                                            <img class="product-image"src="{{ product.image }}">
-                                        </a>
-                                    </div>
-                            
-                                    <div class="product-name">
-                                    <h1>{{ product.name }}</h1>
-                                    </div>
-                                    <br>
-                                    <div class="product-price">
-                                    <span aria-hidden="true"  id="agent_commission_model">
-                                        <br>
-                                        <span class="a-price-symbol" style="padding-top: 100px;">₹</span>
-                                        <span class="a-price-whole">{{ product.price }}</span>
-                                    </span>
-                                    </div>      
-                                    <div class="product-spacer"></div>
-                                    <div class="added-to-cart">
-                                    <img src="../ratings/checkmark.png">
-                                    Added
-                                    </div>
-                                    <form action="{{url_for('AddCart')}}" method="post">
-                                        <input type="hidden" name="product_id" value="{{product.id}}">
-                                        <button type="submit" class="add-to-cart-button js-add-to-cart">Add to Cart</button>
-                                        <input type="hidden" name="quantity" value="1" min="1" max="10">
-                                    </form>
-                                </div>
-                            {% endfor %}
-                        </div>
-					</div>
-			</div>
-	</section>
-		{% endblock %}
+    <header id="header">
+      <div id="header-wrap">
+        <nav class="primary-nav padding-small">
+          <div class="container">
+            <div class="row d-flex align-items-center">
+              <div class="col-lg-2 col-md-2">
+                <div class="main-logo">
+                  <a href="/">
+                    <img src="../static/Background/logoblack.png" alt="logo">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-10 col-md-10">
+                <div class="navbar">
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script>
-
-		function numberWithCommas(number) {
-		var parts = number.toString().split(".");
-		parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-		return parts.join(".");
-		}
-		$(document).ready(function() {
-		$("#agent_commission_model span ").each(function() {
-			var num = $(this).text();
-			var commaNum = numberWithCommas(num);
-			$(this).text(commaNum);
-		});
-		});
-	</script>
+                  <div id="main-nav" class="stellarnav d-flex justify-content-end right">
+                    <ul class="menu-list">
+                      <li class="menu-item has-sub">
+                        <a href="{{url_for('logout')}}" class="item-anchor d-flex align-item-center" >Logout</a>
+                      </li>
+                      <li class="menu-item has-sub">
+                        <a href="{{url_for('OurStore')}}" class="item-anchor active d-flex align-item-center">OurSore</a>
+                      </li>
+                      <li>
+                        <a href="{{url_for('Profile')}}" class="item-anchor" >Profile</a>
+                      </li>
+                      {% if current_user.id == 1 %}
+                      <li class="menu-item has-sub">
+                        <a href="{{url_for('admin')}}" class="item-anchor d-flex align-item-center" >Admin</a>
+                      </li>
+                      {% endif %}
+                      <li class="menu-item has-sub">
+                        <a href="{{url_for('getCart')}}" class="item-anchor d-flex align-item-center" > Cart ({{ session['Shoppingcart']|length }}) </a>
+                      </li>
+                      <li class="menu-item has-sub">
+                        <form class="form-inline my-2 my-lg-0" action="{{url_for('result')}}" style="display: flex;">
+                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section id="selling-products" class="product-store bg-light-grey padding-large">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Best Rewnewable Energy products</h2>
+        </div>
+        <div class="tab-content">
+          <div id="all" data-tab-content class="active">
+            <div class="row d-flex flex-wrap">
+                {% for product in products %}
+              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                <div class="image-holder">
+                  <a href="{{url_for('details',id=product.id)}}">
+                    <img src="{{ product.image }}" alt="{{ product.name }}" class="product-image" style="height: 400px;">
+                  </a>
+                </div>
+                <br>
+                <div class="cart-concern">
+                  <div class="cart-button d-flex justify-content-between align-items-center">
+                    <form action="{{url_for('AddCart')}}" method="post">
+                      <input type="hidden" name="product_id" value="{{product.id}}">
+                      <button type="submit" class="btn-wrap cart-link d-flex align-items-center">add to cart</button>
+                      <input type="hidden" name="quantity" value="1" min="1" max="10">
+                    </form>
+                  </div>
+                </div>
+                <div class="product-detail" id="agent_commission_model">
+                  <h3 class="product-title">
+                    <a href="{{url_for('details',id=product.id)}}">{{ product.name }}</a>
+                  </h3>
+                  <div class="item-price text-primary">₹ {{ product.price }}</div>
+                </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <script src="../static/OurStore/js/jquery-1.11.0.min.js"></script>
+    <script src="../static/OurStore/js/plugins.js"></script>
+    <script src="../static/OurStore/js/script.js"></script>
+    <script>
+            function numberWithCommas(number) {
+            var parts = number.toString().split(".");
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            return parts.join(".");
+            }
+            $(document).ready(function() {
+            $("#agent_commission_model div").each(function() {
+                var num = $(this).text();
+                var commaNum = numberWithCommas(num);
+                $(this).text(commaNum);
+            });
+            });
+    </script>
   </body>
 </html>
-
-
-
-
-
-
