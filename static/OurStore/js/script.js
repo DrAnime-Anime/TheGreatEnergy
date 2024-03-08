@@ -4,7 +4,7 @@
 
   var searchPopup = function() {
       // open search box
-      $('.secondary-nav').on('click', '.search-button', function(e) {
+      $('.primary-nav').on('click', '.search-button', function(e) {
         $('.search-popup').toggleClass('is-visible');
       });
 

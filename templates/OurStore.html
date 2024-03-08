@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../static/OurStore/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- script
@@ -24,6 +25,14 @@
     <script src="../static/OurStore/js/modernizr.js"></script>
   </head>
   <body>
+    <div class="search-popup">
+      <div class="search-popup-container">
+        <form role="search" class="search-form" action="{{url_for('result')}}">
+          <input type="search" id="search-form" class="search-field" placeholder="Type and press enter" value="" name="q" />
+          <button type="submit" class="search-submit"><a href="#"><i class="icon icon-search"></i></a></button>
+        </form>
+      </div>
+    </div>
     <header id="header">
       <div id="header-wrap">
         <nav class="primary-nav padding-small">
@@ -58,11 +67,10 @@
                       <li class="menu-item has-sub">
                         <a href="{{url_for('getCart')}}" class="item-anchor d-flex align-item-center" > Cart ({{ session['Shoppingcart']|length }}) </a>
                       </li>
-                      <li class="menu-item has-sub">
-                        <form class="form-inline my-2 my-lg-0" action="{{url_for('result')}}" style="display: flex;">
-                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
-                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
+                      <li class="user-items search-item pe-3">
+                        <a href="#" class="search-button">
+                          <i class="icon icon-search"></i>
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -102,7 +110,7 @@
                   <h3 class="product-title">
                     <a href="{{url_for('details',id=post.id)}}">{{ post.name }}</a>
                   </h3>
-                  <div class="item-price text-primary">₹ {{ post.price }}</div>
+                  <div class="item-price text-primary" style="color: gray;">₹ {{ post.price }}</div>
                 </div>
             </div>
             {% endfor %}
@@ -127,6 +135,11 @@
                 $(this).text(commaNum);
             });
             });
+
+
+
+
+            
     </script>
   </body>
 </html>

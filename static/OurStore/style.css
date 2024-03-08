@@ -379,9 +379,6 @@ dfn, cite, em, i {
 .text-muted {
   color: var(--primary-color);
 }
-.text-primary {
-  color: var(--primary-color) !important;
-}
 .text-hide {
   font: 0/0 a;
   color: transparent;
@@ -2267,7 +2264,7 @@ i.icon.icon-arrow-io {
 /*----- Sales Offer Section
 --------------------------------------------------------------*/
 .product-item .item-price del {
-    color: var(--grey-color);
+    color: gray;
     font-size: 0.6em;
     padding-right: 10px;
 }

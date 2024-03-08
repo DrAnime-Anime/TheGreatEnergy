@@ -24,6 +24,14 @@
     <script src="../static/OurStore/js/modernizr.js"></script>
   </head>
   <body>
+    <div class="search-popup">
+      <div class="search-popup-container">
+        <form role="search" class="search-form" action="{{url_for('result')}}">
+          <input type="search" id="search-form" class="search-field" placeholder="Type and press enter" value="" name="q" />
+          <button type="submit" class="search-submit"><a href="#"><i class="icon icon-search"></i></a></button>
+        </form>
+      </div>
+    </div>
     <header id="header">
       <div id="header-wrap">
         <nav class="primary-nav padding-small">
@@ -58,11 +66,10 @@
                       <li class="menu-item has-sub">
                         <a href="{{url_for('getCart')}}" class="item-anchor d-flex align-item-center" > Cart ({{ session['Shoppingcart']|length }}) </a>
                       </li>
-                      <li class="menu-item has-sub">
-                        <form class="form-inline my-2 my-lg-0" action="{{url_for('result')}}" style="display: flex;">
-                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
-                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
+                      <li class="user-items search-item pe-3">
+                        <a href="#" class="search-button">
+                          <i class="icon icon-search"></i>
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -102,7 +109,7 @@
                   <h3 class="product-title">
                     <a href="{{url_for('details',id=product.id)}}">{{ product.name }}</a>
                   </h3>
-                  <div class="item-price text-primary">₹ {{ product.price }}</div>
+                  <div class="item-price text-primary" style="color: grey;">₹ {{ product.price }}</div>
                 </div>
             </div>
             {% endfor %}
