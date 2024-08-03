@@ -25,8 +25,6 @@ from secrets import token_hex
 
 
 app = Flask(__name__)
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:thegreat@localhost/our_users'
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:thegreatcloud@thegreatvarun.cvekllujkmyh.us-east-1.rds.amazonaws.com/our_users'
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
 app.config['SECRET_KEY'] = "my super secret key that no one is supposed to know"
 
