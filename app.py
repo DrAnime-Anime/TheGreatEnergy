@@ -34,9 +34,6 @@ search = Search()
 
 search.init_app(app)
 
-db.create_all()
-db.init_app(app)
-
 # Flask_Login Stuff
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -407,7 +404,7 @@ def clearcart():
 
 
 #############################################################################################################
-
+db.create_all()
 
 @app.route('/Checkout')
 @login_required
