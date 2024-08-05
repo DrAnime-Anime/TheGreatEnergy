@@ -34,6 +34,8 @@ search = Search()
 
 search.init_app(app)
 
+db.create_all()
+db.init_app(app)
 
 # Flask_Login Stuff
 login_manager = LoginManager()
