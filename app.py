@@ -22,18 +22,19 @@ import json
 import secrets
 from secrets import token_hex
 
+from sqlalchemy import create_engine
+
 
 
 app = Flask(__name__)
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:thegreat@localhost/our_users'
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
 app.config['SECRET_KEY'] = "my super secret key that no one is supposed to know"
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 search = Search()
-
 search.init_app(app)
-
 
 # Flask_Login Stuff
 login_manager = LoginManager()
